@@ -1,9 +1,17 @@
 
 
+.test {
+    background-image: url(home_background.jpg);
+    background-repeat: no-repeat;
+    
+}
+
 .searchInput {
     margin: 20px;
     border: 2px solid;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.658);
+    
 }
 
 .maStyles {
@@ -11,6 +19,7 @@
     margin: 20px;
     padding: 10px;
     padding-right: 16px;
+    
 }
 
 
