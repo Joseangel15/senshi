@@ -1,0 +1,66 @@
+
+
+.wholeBody {
+    background-color: black;
+    height: 650px;
+}
+
+.upperBox3{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black;
+    height: 175px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.lowerBox3 {
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black;
+    height: 280px;
+    height: auto;
+    padding: 10px;
+}
+
+.instructPic {
+    border: 2px solid white;
+    margin: 10px;
+    background-color: black;
+    height: auto;
+    width: 100px;
+    padding: 0px;
+    
+}
+
+.toshiro {
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.nameAndRank{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.instName{
+    border: 2px solid white;
+    margin: 10px 10px 10px 10px;
+    background-color: black;
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+    height: auto;
+}
+
+.instRank{
+    border: 2px solid white;
+    margin: 10px 10px 10px 10px;
+    background-color: black;
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+}

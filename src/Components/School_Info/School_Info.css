@@ -1,0 +1,96 @@
+
+.fullPage{
+    height: 100%;
+    height: auto
+    ;
+    
+}
+
+.schoolPicture{
+    border: 2px solid white;
+    margin: 20px 25px 20px 25px;
+    background-color: black;
+    height: 300px;
+    
+}
+
+.instructor{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.schoolContainer {
+    border: 2px solid white;
+    margin: 20px 25px 20px 25px;
+    background-color: black;
+    height: auto;
+}
+
+.upperContainer{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black
+}
+
+.lowerContainer{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black;
+    height: auto;
+}
+
+.schoolInformation{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black;
+    height: auto;
+    padding: 10px;
+}
+
+.reviews{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black
+}
+
+.schoolContact{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    background-color: black
+}
+
+.instrucPicture{
+    border: 2px solid white;
+    margin: 20px 25px 20px 25px;
+    background-color: black;
+    width: 150px;
+    height: 150px
+}
+.bottomPage{
+    background: black;
+    height: 40px;
+}
+
+.picture2{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (min-width: 700px) {
+
+    .schoolPicture {
+        width: 538px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .schoolContainer {
+        width: 538px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+}

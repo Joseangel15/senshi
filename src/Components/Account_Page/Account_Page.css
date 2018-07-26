@@ -1,0 +1,103 @@
+
+
+.upperBar {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profilePic {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 2px;
+}
+
+.accountName {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 5px;
+    width: 120px;
+}
+
+.accountRank {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 5px;
+}
+
+.middleBar {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    height: 250px;
+}
+
+.lowerBar {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    height: 100px;
+}
+
+.userPicture {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lowerSection {
+    height: 50px;
+
+}
+
+.mySchools {
+    background-color: black;
+    width: auto;
+    height: 230px;
+    overflow: scroll;
+}
+
+/* .editBtn {
+    background-image: url(edit_icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+} */
+
+@media (min-width: 500px) {
+        
+    .upperBar{
+        width: 532px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .middleBar{
+        width: 525px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .lowerBar {
+        width: 525px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .userPicture{
+        width: 250px;
+    }
+
+    .profilePic{
+        width: 200px;
+    }
+}

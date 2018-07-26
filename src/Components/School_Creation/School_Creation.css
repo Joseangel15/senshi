@@ -1,0 +1,23 @@
+
+
+.createSchool {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.contactInformation {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.instructorInformation {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.lowerDiv {
+    height: 50px;
+}

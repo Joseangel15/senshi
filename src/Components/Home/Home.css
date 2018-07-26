@@ -1,0 +1,128 @@
+
+
+.searchInput {
+    margin: 20px;
+    border: 2px solid;
+    padding: 10px;
+}
+
+.maStyles {
+    border: 2px solid white;
+    margin: 20px;
+    padding: 10px;
+    padding-right: 16px;
+}
+
+
+
+.nameAll {
+    margin-bottom: 40px;
+    border: 2px solid white;
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    
+}
+
+.map {
+    border: 2px solid white;
+    padding: 100px;
+    margin: 10px;
+    
+}
+
+.results {
+    /* border: 2px solid white; */
+    padding: 5px;
+    margin: 10px;
+    height: 100%; /*Use a media query to have the heigth to remain at a set amount. */
+}
+
+.listOfResults {
+    border: 2px solid white;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;    
+}
+
+.schoolName {
+    margin-top: 10px;
+    
+}
+
+.schoolPics {
+    object-fit: fill;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.searchAllBox {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.lowerPart2 {
+    height: 50px;
+}
+
+.karate {
+    /* background-image: url('../../karate_kanji.gif'); 
+    background-size: 145px;
+    height: 50px; */
+    
+}
+
+/* .karate { transition: all .2s ease-in-out; }
+.karate:hover { transform: scale(1.1); } */
+
+@media (min-width: 700px) {
+    .maStyles {
+        width: 538px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+
+    .searchAllBox {
+        width: 538px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+
+    .map {
+        width: 538px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+
+    .title {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+
+    .results {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+
+
+}

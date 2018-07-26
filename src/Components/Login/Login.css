@@ -1,0 +1,31 @@
+
+.loginBar{
+    border: 2px solid white;
+    margin: auto;
+    background-color: black
+}
+
+.lowerPart {
+    height: 275px;
+    background-color: black;
+}
+
+.upperPart {
+    background-color: black;
+    height: 125px;
+}
+
+h1 {
+    text-decoration: none;
+    color: rgb(150, 0, 0);
+}
+
+@media (max-width: 700px) {
+    .loginBar {
+        width: 275px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: auto;
+    }
+}

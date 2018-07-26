@@ -1,0 +1,34 @@
+
+
+.aboutLowerPart {
+    background-color: black;
+    height: 550px;
+    
+}
+
+.paragraph{
+    border: 2px solid white;
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    width: 500px;
+    
+}
+
+.middleSection {
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.picture {
+    background-image: url(Martial_Arts.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    left: px;
+    padding: 20px;
+    width: 100%;
+}
+
