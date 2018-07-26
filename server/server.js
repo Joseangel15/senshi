@@ -15,7 +15,8 @@ let {
     CLIENT_SECRET, 
     REACT_APP_DOMAIN, 
     CONNECTION_STRING, 
-    SESSION_SECRET
+    SESSION_SECRET,
+    ADD_PROTOCOL,
 } = process.env;
 
 app.use(session ({
@@ -37,7 +38,7 @@ app.get('/auth/callback', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `http://${req.headers.host}/auth/callback`
+        redirect_uri: `${process.env.ADD_PROTOCOL}://${req.headers.host}/auth/callback`
     };
 
     //port request to exchange the code for a token.

@@ -19,9 +19,9 @@ function Login() {
                 <div className='upperPart'>
 
                 </div>
-                <Link to='./Home'><h1>SENSHI</h1></Link>
+                <Link to='./Home'><h1 className='mainTitle'>SENSHI</h1></Link>
                 <div className='loginBar'>
-                    <h3>Begin The Journey</h3>
+                    <h2>Begin The Journey</h2>
                     <div>
                         <h5>Username</h5>
                         <h5>Password</h5>

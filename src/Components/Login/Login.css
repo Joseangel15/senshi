@@ -1,4 +1,12 @@
 
+body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .loginBar{
     border: 2px solid white;
     margin: auto;
@@ -6,7 +14,7 @@
 }
 
 .lowerPart {
-    height: 275px;
+    
     background-color: black;
 }
 
@@ -15,17 +23,27 @@
     height: 125px;
 }
 
-h1 {
+.mainTitle {
     text-decoration: none;
     color: rgb(150, 0, 0);
+    margin-bottom: 50px;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.616)
 }
 
-@media (max-width: 700px) {
+@media (min-width: 360px) {
     .loginBar {
         width: 275px;
         display: flex;
         flex-direction: column;
         height: 100%;
         margin: auto;
+        
     }
+
+    .mainTitle {
+        font-size: 60px;
+    }
+
+
 }
