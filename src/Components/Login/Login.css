@@ -9,17 +9,17 @@ body {
 
 .loginBar{
     border: 2px solid white;
-    margin: auto;
-    background-color: black
+    background-color: rgba(0, 0, 0, 0.747);
+    
 }
 
 .lowerPart {
-    
-    background-color: black;
+    height: 175px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .upperPart {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     height: 125px;
 }
 
@@ -28,8 +28,27 @@ body {
     color: rgb(150, 0, 0);
     margin-bottom: 50px;
     margin-top: 0px;
-    background-color: rgba(0, 0, 0, 0.616)
+    background-color: rgba(0, 0, 0, 0.616);
+    
 }
+
+.pictureDiv {
+    
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(kickSunset.jpg);
+    background-position: center center;
+    background-size: 100% 160%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.journey{
+    color: white
+}
+
+
+
+
 
 @media (min-width: 360px) {
     .loginBar {

@@ -15,22 +15,24 @@ function Login() {
 
     return(
         <div>
-            <div>
+            <div className='pictureDiv'>
+
+
                 <div className='upperPart'>
 
                 </div>
-                <Link to='./Home'><h1 className='mainTitle'>SENSHI</h1></Link>
-                <div className='loginBar'>
-                    <h2>Begin The Journey</h2>
-                    <div>
-                        <h5>Username</h5>
-                        <h5>Password</h5>
-                        <button onClick={login}>Sign In</button>
+                    <Link to='./Home'><h1 className='mainTitle'>SENSHI</h1></Link>
+                    <div className='loginBar'>
+                        <h2 className='journey'>Begin The Journey</h2>
                         <div>
-                            <h5>Register</h5>
+                            <h5>Username</h5>
+                            <h5>Password</h5>
+                            <button onClick={login}>Sign In</button>
+                            <div>
+                                <h5>Register</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <div className='lowerPart'>
 
                 </div>

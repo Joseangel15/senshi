@@ -41,6 +41,7 @@ class School_Creation extends Component {
         
 
         axios.post('/api/Schools', { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_picture, school_picture, school_instructor_name, school_instructor_rank, school_instructor_bio }).then(res => {
+            
             this.setState({
                 school_name: '',
                 school_mastyle: '',
@@ -58,6 +59,8 @@ class School_Creation extends Component {
                 school_instructor_bio: '',
             })
         })
+
+        // axios.post to send the created school to the mySchools table, where it needs to record the school name, school ID, userId and mySchools Id. 
     }
         
 

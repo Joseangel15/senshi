@@ -140,10 +140,34 @@ module.exports = {
     },
 
     editSchool: (req, res, next ) => {
-        const {id} = req.params
         const db = req.app.get('db');
-        db.edit_School([id]).then(id => {
-            res.status(200).send(id);
+        const {id} =req.params
+        const {
+            school_name,
+            school_mastyle,
+            school_address,
+            school_city,
+            school_state,
+            school_zip,
+            school_phone,
+            school_email,
+            school_info,
+            school_instructor_picture,
+            school_picture,
+            school_instructor_name,
+            school_instructor_rank,
+            school_instructor_bio
+        } = req.body
+
+        db.edit_School([school_name, school_mastyle, school_address, school_city, school_state, school_zip,school_phone, school_email, school_info, school_instructor_picture, school_picture, school_instructor_name, school_instructor_rank, school_instructor_bio, id])
+        
+        .then( user => { res.status(200).send(user);})
+
+        .catch(err => {
+            res.status(500).send({
+                errorMessage: 'userNotFound'
+            })
+            console.log(err)
         })
     }
 

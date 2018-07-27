@@ -1,7 +1,7 @@
 
 
 .aboutLowerPart {
-    background-color: black;
+    background-color: rgba((0, 0, 0, 0), 0, 0);
     height: 550px;
     
 }
@@ -11,6 +11,7 @@
     margin: 20px 20px 20px 20px;
     padding: 20px;
     width: 500px;
+    background: rgba(0, 0, 0, 0.589);
     
 }
 
@@ -23,12 +24,11 @@
     
 }
 
-.picture {
-    background-image: url(Martial_Arts.jpg);
+.mainBody {
+    
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.979)), url(Martial_Arts.jpg);
+    background-position: center center;
+    background-size: 100% 140%;
     background-repeat: no-repeat;
-    position: relative;
-    left: px;
-    padding: 20px;
-    width: 100%;
 }
 

@@ -34,6 +34,8 @@ componentDidMount = () => {
             
         })
     });
+
+    //This componentDidMount must call the Schools created by the users. 
 }
 
 
@@ -67,19 +69,6 @@ deleteConfirmation = ( id ) => {
     }
 }
 
-// handleSchoolEdit = () => {
-    
-    
-//     axios.get(`/api/School/${this.state.id}`).then(res => {
-//         this.setState({
-            
-//             school: res.data
-            
-//         });
-//         console.log(this.state.id)
-//         console.log(this.state.school)
-//     });
-// };
 
 render(){
 

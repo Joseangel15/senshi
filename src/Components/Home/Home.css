@@ -1,9 +1,11 @@
 
 
 .test {
-    background-image: url(home_background.jpg);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(home_background.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    
+    background-attachment: fixed;
 }
 
 .searchInput {
@@ -21,7 +23,6 @@
     padding-right: 16px;
     
 }
-
 
 
 .nameAll {
@@ -53,7 +54,9 @@
     margin: 10px;
     display: flex;
     padding: 10px;
-    justify-content: space-evenly;    
+    justify-content: space-evenly; 
+    background-color: rgba(0, 0, 0, 0.774);
+   
 }
 
 .schoolName {
@@ -82,6 +85,9 @@
     height: 50px;
 }
 
+
+
+
 .karate {
     /* background-image: url('../../karate_kanji.gif'); 
     background-size: 145px;
@@ -93,6 +99,7 @@
 .karate:hover { transform: scale(1.1); } */
 
 @media (min-width: 700px) {
+    
     .maStyles {
         width: 538px;
         display: flex;

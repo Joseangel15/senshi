@@ -13,13 +13,15 @@ class About extends Component {
         return (
             <div className='mainBody'>
                 <Navigation/>
-                <div>
+                <div >
                     <h1>What is SENSHI?</h1>
                 </div>
 
                 <div className='middleSection'>
                     <div className='picture'>
                         <div className='paragraph'>
+
+                            <h2>Our Mission</h2>
 
                             <p>
                                 Prepare for training! And make it double!

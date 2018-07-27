@@ -52,16 +52,20 @@ class Home extends Component{
 
         const buttonStyling = {
             border: '2px solid white',
-            backgroundColor: 'black',
+            backgroundColor: 'rgba(0, 0, 0, 0.658)',
             margin: '5px',
-            padding: '20px',
+            padding: '10px',
             height: '100%',
             width: '100%',
             color: 'white',
             textAlign: 'center',
             fontFamily: 'Donegal One, serif',
-            letterSpacing: '.2rem',
-            cursor: 'pointer'
+            letterSpacing: '.4rem',
+            cursor: 'pointer',
+            borderRadius: '10px',
+            fontSize: '20px',
+            
+            
         }    
       
         
@@ -100,7 +104,7 @@ class Home extends Component{
 
                 <div className='title'>
                     <div className='searchInput'>
-                        <h1>FIND YOUR PATH</h1>
+                        <h1 className='homeTitle'>FIND YOUR PATH</h1>
 
                     </div>
                 </div>
