@@ -16,6 +16,7 @@ class Account_Page extends Component {
             Rank: '',
             editing: false, 
             mySchools: [],
+            myFavoriteSchools: [],
            
         }
     }
@@ -27,13 +28,20 @@ componentDidMount = () => {
     });
 
 
-    axios.get('/api/Schools/find_all').then(res => {
+    axios.get('/api/Schools/find_All').then(res => {
         this.setState({
 
             mySchools: res.data,
             
         })
     });
+
+    axios.get('/api/Schools/find_Favorites/').then( res => {
+        this.setState({
+
+            myFavoriteSchools: res.data
+        })
+    })     
 
     //This componentDidMount must call the Schools created by the users. 
 }
@@ -71,7 +79,7 @@ deleteConfirmation = ( id ) => {
 
 
 render(){
-
+    
     const theSchools = this.state.mySchools.map( el => {
         console.log(this.state.mySchools)
             return (
@@ -80,7 +88,7 @@ render(){
         <div key={el.id} >
                 
                 <div className='listOfResults'>
-                    <div>
+                    <div >
 
                         <Link to={`./School_Info/${el.id}`}><h4 
                             className='schoolName' 
@@ -119,16 +127,17 @@ render(){
     return(
         <div>
             <Navigation />
-            <div>
+            <div className='fistPhoto'>
                 Account
                 <div className='upperBar'>
                     <div className='profilePic'>                 
                         {user.user_picture ? <img src={user.user_picture} alt="User" className='userPicture'/> : null}
+                        
                     </div>
                     <div>
                         <div className='accountName'>{user.user_name}</div>
                         <div className='accountRank'>{user.user_rank}</div>
-                        <Link to='/School_Creation'><button >Create School</button></Link>
+                        <Link to='/School_Creation'><button className='createSchoolBtn'>Create School</button></Link>
                     </div>
                 </div>
                 <div className='middleBar'>
@@ -140,11 +149,17 @@ render(){
 
                 </div>
                     
-                <div className='lowerBar'>Favorites</div>
-            </div>
-            <div className='lowerSection'>
+                <div className='lowerBar'>
+                
+                My Favorite Schools
 
+                    <div className='myFavoriteSchools'>
+                        
+                    </div>
+                
+                </div>
             </div>
+            
         </div>
     )
 

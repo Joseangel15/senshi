@@ -3,7 +3,7 @@
 .test {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(home_background.jpg);
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -17,11 +17,12 @@
 }
 
 .maStyles {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 20px;
     padding: 10px;
     padding-right: 16px;
-    
+    background-color: rgba(0, 0, 0, 0.61);
+    box-shadow: 0 0 1000px rgba(0, 0, 0, 0.911);
 }
 
 
@@ -55,13 +56,14 @@
     display: flex;
     padding: 10px;
     justify-content: space-evenly; 
-    background-color: rgba(0, 0, 0, 0.774);
+    background-color: rgba(0, 0, 0, 0);
    
 }
 
 .schoolName {
     margin-top: 10px;
-    
+    text-decoration: none;
+    color: rgb(150, 0, 0);
 }
 
 .schoolPics {
@@ -83,6 +85,32 @@
 
 .lowerPart2 {
     height: 50px;
+}
+
+.favoriteBtn {
+    background-color: DodgerBlue;
+    background-image: url(favorite_icon.png);
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 10px;
+    cursor: pointer; 
+    margin-left: 100px;
+}
+
+.favoriteBtn:hover {
+    background-color: RoyalBlue;
+}
+
+.smallSchoolPicture {
+    width: 100px;
+    height: 80px;
+}
+
+.miniPicture {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid white;
 }
 
 

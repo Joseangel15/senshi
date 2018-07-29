@@ -11,53 +11,53 @@ class About extends Component {
 
     render() {
         return (
-            <div className='mainBody'>
+            <div>
+
                 <Navigation/>
-                <div >
-                    <h1>What is SENSHI?</h1>
-                </div>
 
-                <div className='middleSection'>
-                    <div className='picture'>
-                        <div className='paragraph'>
+                <div className='mainBody'>
 
-                            <h2>Our Mission</h2>
+                
+                        <h1 className='whatIsSenshi'>What is SENSHI?</h1>
+                    
 
-                            <p>
-                                Prepare for training! And make it double!
-                            </p>
+                    <div className='middleSection'>
+                        
+                            <div className='paragraph'>
 
-                            <p>
-                                To protect the world by creating warriors!
-                            </p>
+                                <h2>Our Mission</h2>
 
-                            <p>
-                                To unite all peoples in discipline and self-mastery!
-                            </p>
+                                <p>
+                                    Prepare for training! And make it double!
+                                </p>
 
-                            <p>
-                                To denounce the evils of passiveness and laziness!
-                            </p>
+                                <p>
+                                    To protect the world by creating warriors!
+                                </p>
 
-                            <p>
-                                To extend our help to the weak of heart!
-                            </p>
-                                            
-                            <p>
-                                Senshi blasts off at the speed of light!
-                            </p>
+                                <p>
+                                    To unite all peoples in discipline and self-mastery!
+                                </p>
 
-                            <p>
-                                Start training now, or prepare to fight!
-                            </p>
-                        </div>
+                                <p>
+                                    To denounce the evils of passiveness and laziness!
+                                </p>
+
+                                <p>
+                                    To extend our help to the weak of heart!
+                                </p>
+                                                
+                                <p>
+                                    Senshi blasts off at the speed of light!
+                                </p>
+
+                                <p>
+                                    Start training now, or prepare to fight!
+                                </p>
+                            </div>
                     </div>
-                </div>
-
-                <div className='aboutLowerPart'>
 
                 </div>
-
             </div>
         )
     }

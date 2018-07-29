@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 
 function Login() {
@@ -14,29 +14,25 @@ function Login() {
     }
 
     return(
-        <div>
-            <div className='pictureDiv'>
+        <div className='pictureDiv'>
+
+                   <h1 className='mainTitle'>SENSHI</h1>
 
 
-                <div className='upperPart'>
-
-                </div>
-                    <Link to='./Home'><h1 className='mainTitle'>SENSHI</h1></Link>
                     <div className='loginBar'>
-                        <h2 className='journey'>Begin The Journey</h2>
-                        <div>
-                            <h5>Username</h5>
-                            <h5>Password</h5>
-                            <button onClick={login}>Sign In</button>
-                            <div>
-                                <h5>Register</h5>
-                            </div>
-                        </div>
-                    </div>
-                <div className='lowerPart'>
 
-                </div>
-            </div>
+                        <h2 className='journey'>Begin The Journey</h2>
+
+                        <div>
+                            
+                            <button onClick={login} className='loginBtn'>Sign In</button>
+                            
+                        </div>
+
+                    </div>
+
+                
+            
         </div>
     )
 }

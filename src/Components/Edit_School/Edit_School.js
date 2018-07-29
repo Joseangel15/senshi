@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Navigation from '../Navigation/Navigation';
 import './Edit_School.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class Edit_School extends Component {
     constructor(){
@@ -58,21 +59,9 @@ class Edit_School extends Component {
         
     }
 
-    editSchoolConfirmation = () => {
-
-        let confirmation = window.confirm(`Are you sure you want to update this School's information?`)
-
-        if(confirmation) {
-            this.editAlert()
-        } else {
-            return
-        }
-
-    }
+   
 
     handleSchoolEdit = () => {
-
-        this.editSchoolConfirmation()
         
         
         const { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_name, school_instructor_rank, school_instructor_bio, school_instructor_picture, school_picture, id} = this.state;
@@ -127,7 +116,18 @@ class Edit_School extends Component {
 
         });
 
-        
+        alert('School information has been updated')
+    }
+
+    editConfirmation = ( ) => {
+
+        let confirmation = window.confirm('Are you sure you want to update this School?')
+    
+        if (confirmation){
+           this.handleSchoolEdit()
+        } else {
+            return
+        }
     }
 
 
@@ -291,9 +291,9 @@ class Edit_School extends Component {
                         </div>
                     </div>
                     <div>
-                        {/* <Link to='/Account_Page'> */}
-                        <button onClick={ this.handleSchoolEdit } >Submit</button>
-                        {/* </Link> */}
+                        <Link to='/Account_Page'>
+                        <button onClick={ this.editConfirmation } >Submit</button>
+                        </Link>
                     </div>
                 </div>
                 <div className='lowerDiv'>

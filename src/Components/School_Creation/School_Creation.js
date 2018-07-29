@@ -70,15 +70,22 @@ class School_Creation extends Component {
             margin: '10px'
         }
 
+        const inputMargin = {
+            marginLeft: '20px',
+            alignContent: 'center'
+        }
+
         return(
             <div>
                 <Navigation/>
-                <div style={style}>
-                    School Creation 
+                <div 
+                    className='fullDiv'>
+
                     <div className='createSchool'>
                         Create School
                         <div style={style}>School Name
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_name' 
                                 onChange={this.handleInputs} 
@@ -86,6 +93,7 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>Martial Art Style
                             <select 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_mastyle' 
                                 onChange={this.handleInputs}
@@ -106,7 +114,8 @@ class School_Creation extends Component {
                             </select>
                         </div>
                         <div style={style}>Picture
-                            <input 
+                            <input
+                                style = {inputMargin} 
                                 type="text" 
                                 name='school_picture' 
                                 onChange={this.handleInputs}
@@ -117,6 +126,7 @@ class School_Creation extends Component {
                         Contact Information 
                         <div style={style}>Address
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_address' 
                                 onChange={this.handleInputs}
@@ -124,6 +134,7 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>City
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_city' 
                                 onChange={this.handleInputs}
@@ -131,6 +142,7 @@ class School_Creation extends Component {
                         </div>
                         <dir style={style}>state
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_state' 
                                 onChange={this.handleInputs}
@@ -138,6 +150,7 @@ class School_Creation extends Component {
                         </dir>
                         <div style={style}>Zip Code
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_zip' 
                                 onChange={this.handleInputs}
@@ -145,6 +158,7 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>Phone
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_phone' 
                                 onChange={this.handleInputs}
@@ -152,13 +166,17 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>Email
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_email' 
                                 onChange={this.handleInputs}
                                 value={ this.state.school_email }/>
                         </div>
                         <div style={style}>School Info
-                            <input 
+                            <textarea
+                                row='4'
+                                cols='30'
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_info' 
                                 onChange={this.handleInputs}
@@ -169,6 +187,7 @@ class School_Creation extends Component {
                         Instructor Information
                         <div style={style}>Instructor Name
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_instructor_name' 
                                 onChange={this.handleInputs}
@@ -176,6 +195,7 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>Rank
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_instructor_rank' 
                                 onChange={this.handleInputs}
@@ -183,13 +203,18 @@ class School_Creation extends Component {
                         </div>
                         <div style={style}>Picture
                             <input 
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_instructor_picture' 
                                 onChange={this.handleInputs}
                                 value={ this.state.school_instructor_picture }/>
                         </div>
                         <div style={style}>Bio
-                            <input 
+                            <textarea 
+                                row='4'
+                                cols='30'
+                                className='bioInput'
+                                style = {inputMargin}
                                 type="text" 
                                 name='school_instructor_bio' 
                                 onChange={this.handleInputs}
@@ -198,13 +223,13 @@ class School_Creation extends Component {
                     </div>
                     <div>
                         {/* <Link to='/Account_Page'> */}
-                        <button onClick={ this.createSchool }>Submit</button>
+                        <button 
+                            onClick={ this.createSchool }
+                            className='submitBtn'>Submit</button>
                         {/* </Link> */}
                     </div>
                 </div>
-                <div className='lowerDiv'>
-
-                </div>
+                
             </div>
         )
     }

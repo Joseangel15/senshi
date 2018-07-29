@@ -169,6 +169,35 @@ module.exports = {
             })
             console.log(err)
         })
+    },
+
+    findFavorites: (req, res, next) => {
+        const db = req.app.get('db');
+        db.find_Favorites().then(dbResult => {
+            res.status(200).send(dbResult);
+        });
+    },
+
+    saveFavorites: (req, res, next) => {
+        
+        const {school_id, user_id} = req.params;
+
+        const db = req.app.get('db'); 
+
+        db.add_ToFavorites([ 
+
+            school_id,
+            user_id,
+            
+        ])
+
+        .then(dbResult => {
+            res.status(200).send(dbResult);
+        })
+        .catch(err => {
+            console.log(err)
+        });
+
     }
 
     

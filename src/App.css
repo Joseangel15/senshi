@@ -3,9 +3,13 @@
   font-family: 'Donegal One', serif;
   color: white;
   background-color: black;
+  height: 100%;
 
 }
 
 button {
   cursor: pointer;
+  
 }
+
+

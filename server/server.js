@@ -119,6 +119,14 @@ app.delete('/api/School/:id', controller.deleteSchool)
 
 app.put('/api/School/:id', controller.editSchool)
 
+//Endpoints to find schools from user
+
+app.get('/api/Schools/find_schools', controller.findFavorites)
+
+//Add favorites to database
+
+app.post('/api/Schools/Favorites', controller.saveFavorites)
+
 
 app.listen(SERVER_PORT, () => { console.log(`It's over ${SERVER_PORT}!`);
 });

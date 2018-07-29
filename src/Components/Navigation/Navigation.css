@@ -60,7 +60,7 @@ header {
   
   .mobile-nav {
     background-color: #1f1f1f;
-    position: fixed;
+    /* position: fixed; */
     display: block;
     top: 70px;
     color: rgb(150, 0, 0);

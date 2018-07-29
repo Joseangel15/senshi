@@ -35,3 +35,14 @@ $14
 
 select *
 from schools;
+
+-- insert into MySchools
+-- (
+--     userid,
+--     schoolid
+-- )
+-- VALUES
+-- (
+-- $15,
+-- $16
+-- );

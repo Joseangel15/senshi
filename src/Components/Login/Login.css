@@ -5,17 +5,26 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(kickSunset.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .loginBar{
-    border: 2px solid white;
     background-color: rgba(0, 0, 0, 0.747);
+    padding-bottom: 40px;
+    border-radius: 10px;
     
 }
 
 .lowerPart {
-    height: 175px;
-    background-color: rgba(0, 0, 0, 0);
+    
+    background-color: rgba(255, 255, 255, 0);
+    background-size: auto; 
+    position: absolute; top: 0; left: 0;
+
 }
 
 .upperPart {
@@ -26,8 +35,8 @@ body {
 .mainTitle {
     text-decoration: none;
     color: rgb(150, 0, 0);
-    margin-bottom: 50px;
-    margin-top: 0px;
+    margin-bottom: 80px;
+    margin-top: 100px;
     background-color: rgba(0, 0, 0, 0.616);
     
 }
@@ -36,14 +45,38 @@ body {
     
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(kickSunset.jpg);
     background-position: center center;
-    background-size: 100% 160%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
 
+
 .journey{
-    color: white
+    color: white;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.loginBtn {
+    margin-bottom: 30px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Donegal One', 'Serif';
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.loginBtn:hover {
+    background-color: white;
+    color: black;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 

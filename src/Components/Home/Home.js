@@ -15,7 +15,9 @@ class Home extends Component{
         this.state = {
             maStyle: [],
             searchMa: [],
-            school: []
+            school: [],
+            school_id: '',
+            user_id: '',
         }
         
     }
@@ -45,6 +47,23 @@ class Home extends Component{
         });
         console.log(this.state.school)
     };
+
+    handleFavorites = () => {
+
+        const {school_id, user_id} = this.state
+
+        axios.post('api/Schools/Favorites', {school_id, user_id}).then( res => {
+
+            this.setState({
+
+                school_id: '',
+                user_id: '',
+
+            })
+
+        })
+
+    }
 
 
     render(){
@@ -76,6 +95,11 @@ class Home extends Component{
             <div key={el.id} >
                     
                 <div className='listOfResults'>
+                    <div className='smallSchoolPicture'>
+
+                        {el.school_picture ? <img src={el.school_picture} alt="" className='miniPicture'/> : null}
+                        
+                    </div>
                     <div>
 
                         <Link to={`./School_Info/${el.id}`}><h4 
@@ -84,6 +108,15 @@ class Home extends Component{
                             value={el.id}
                             onClick={ () => { this.getSchoolData(el.id) } }>
                             {el.school_name}
+                            <button 
+                                className='favoriteBtn' 
+                                onClick={this.handleFavorites}
+                                >
+                                
+                                Fav
+
+                            </button>
+                            
                         </h4></Link>
 
                         <h6>
