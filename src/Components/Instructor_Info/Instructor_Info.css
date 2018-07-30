@@ -1,43 +1,56 @@
 
 
 .wholeBody {
-    background-color: black;
-    height: 650px;
+    vertical-align: top;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(AsianSchool.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 30px;
+    margin: none;
+    padding-bottom: 40px;
 }
 
 .upperBox3{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 20px 20px 20px 20px;
-    background-color: black;
-    height: 175px;
+    background-color: rgba(0, 0, 0, 0.664);
+    height: auto;
     padding: 5px;
     display: flex;
     justify-content: space-around;
+    border-radius: 10px;
+    
     
 }
 
 .lowerBox3 {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 20px 20px 20px 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.664);
     height: 280px;
     height: auto;
+    height: 500px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .instructPic {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     height: auto;
-    width: 100px;
+    width: auto;
     padding: 0px;
+    border-radius: 10px;
     
 }
 
 .toshiro {
     max-width: 100%;
     max-width: 100%;
+    border-radius: 10px;
 }
 
 .nameAndRank{
@@ -47,20 +60,58 @@
 }
 
 .instName{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 10px 10px 10px 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.664);
     height: 30px;
     width: 100px;
     padding: 10px;
     height: auto;
+    border-radius: 10px;
 }
 
 .instRank{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 10px 10px 10px 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.664);
     height: 30px;
     width: 100px;
     padding: 10px;
+    border-radius: 10px;
+}
+
+.bio{
+    font-size: 20px;
+}
+
+@media (min-width: 500px) {
+
+    .upperBox3{
+        width: 532px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .lowerBox3{
+        width: 532px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .instructPic{
+        height: auto;
+        width: 200px;
+    }
+
+    .instName{
+        margin-top: 50px;
+    }
+
+    
 }

@@ -18,6 +18,7 @@ function Login() {
 
                    <h1 className='mainTitle'>SENSHI</h1>
 
+                        <h2 className='homeSubTitle'>Discover the warrior within</h2>
 
                     <div className='loginBar'>
 

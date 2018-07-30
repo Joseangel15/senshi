@@ -31,18 +31,4 @@ $11,
 $12,
 $13,
 $14
-);
-
-select *
-from schools;
-
--- insert into MySchools
--- (
---     userid,
---     schoolid
--- )
--- VALUES
--- (
--- $15,
--- $16
--- );
+) RETURNING *;

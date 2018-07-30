@@ -1,0 +1,36 @@
+
+
+.backPic {
+    vertical-align: top;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url(AsianSchool.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 30px;
+    margin: none;
+    
+}
+
+.secondSubmit{
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Donegal One', 'Serif';
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.secondSubmit:hover {
+    background-color: white;
+    color: black;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.createSchool{
+    margin-top: 10px;
+}

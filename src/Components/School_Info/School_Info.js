@@ -86,85 +86,89 @@ class School_Info extends Component {
 
                 <Navigation/>
 
-                <div className='schoolPicture'>
-                    <img src={this.state.school_picture} alt="school" className='picture2'/>
-                </div>
+                <div className='japanBack'>
 
-                <div className='schoolContainer'>
-                    School Information
-
-                    <div className='upperContainer'>
-
-                        <div className='schoolName'>
-                            {this.state.school_name}
-                        </div>
-
-
-                        <Link 
-                        to={`/Instructor_Info/${this.state.id}`}
-                        ><div
-                            value={this.state.school}
-                            className='instrucPicture'
-                            onClick={ () => this.getInstructorData(this.state.id) }
-                            >
-
-                            <img src={this.state.school_instructor_picture} alt="instructor" className='instructor'/>
-
-                        </div></Link>
-
-                        <div className='instrNameAndRank' style={divMargin} className='instructorPicture'>
-
-                            {this.state.school_instructor_name} Rank {this.state.school_instructor_rank}
-
-                        </div>
-
-                        <div className='schoolMaStyle'>
-
-                            School MA Style
-
-                            <div style={divMargin}>
-
-                                {this.state.school_mastyle}
-
-                            </div>
-                        </div>
-
+                    <div className='schoolPicture'>
+                        <img src={this.state.school_picture} alt="school" className='picture2'/>
                     </div>
 
-                    <div className='lowerContainer'>
+                    <div className='schoolContainer'>
+                        School Information
 
-                        <div className='schoolInformation'>
-                                {this.state.school_info}
+                        <div className='upperContainer'>
 
-                            <div style={divMargin}>
-                                Contact Info
+                            <div className='schoolName'>
+                                {this.state.school_name}
+                            </div>
 
-                                <div style={divMargin}>
-                                    {this.state.school_phone}
+                            
+                            <div className='superDiv'>
+                                <Link 
+                                to={`/Instructor_Info/${this.state.id}`}
+                                >
+                                <div
+                                    value={this.state.school}
+                                    className='instrucPicture'
+                                    onClick={ () => this.getInstructorData(this.state.id) }
+                                    >
+
+                                    <img src={this.state.school_instructor_picture} alt="instructor" className='instructor'/>
+
+                                </div></Link>
+                           
+                            <div>
+
+                                <div className='instrNameAndRank' style={divMargin} className='instructorPicture'>
+
+                                    <div className='instructorName'>{this.state.school_instructor_name}</div>
+                                    
+                                    <div> Rank {this.state.school_instructor_rank} </div>
+
                                 </div>
 
-                                <div style={divMargin}>
-                                    {this.state.school_email}
+                                <div className='schoolMaStyle'>
+
+                                    School MA Style
+
+                                    <div style={divMargin}>
+
+                                        {this.state.school_mastyle}
+
+                                    </div>
                                 </div>
+
+                            </div>
 
                             </div>
 
                         </div>
 
-                        <div className='reviews'>
-                            Reviews
-                        </div>
+                        <div className='lowerContainer'>
 
-                        <div className='schoolContact'>
-                            Contact School
+                            <div className='schoolInformation'>
+                                    {this.state.school_info}
+
+                                <div style={divMargin}>
+                                    Contact Info
+
+                                    <div style={divMargin}>
+                                        {this.state.school_phone}
+                                    </div>
+
+                                    <div style={divMargin}>
+                                        {this.state.school_email}
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
 
-                </div>
-
-                <div className='bottomPage'>
-
+                    
                 </div>
             </div>
         )

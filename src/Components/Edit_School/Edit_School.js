@@ -151,24 +151,30 @@ class Edit_School extends Component {
     render(){
 
         const style = {
-            margin: '10px'
+            margin: '10px',
+            marginBottom: '10px'
+        }
+
+        const inputMargin = {
+            marginLeft: '20px',
+            alignContent: 'center'
         }
         
 
         return(
             <div>
                 <Navigation/>
-                <div style={style}>
+                <div className='backPic'>
 
                     Edit School 
 
                     <div className='createSchool'>
-                        Create School
                         <div style={style}>
                             
                             School Name
 
                             <input 
+                                style = {inputMargin}
                                 name='school_name'
                                 value={this.state.school_name}
                                 onChange={this.handleChangeInfo}/>
@@ -180,6 +186,7 @@ class Edit_School extends Component {
                             Martial Art Style
 
                             <select
+                                style = {inputMargin}
                                 name='school_mastyle'
                                 value={this.state.school_mastyle}
                                 onChange={this.handleChangeInfo}
@@ -206,6 +213,7 @@ class Edit_School extends Component {
                             Picture
 
                             <input 
+                                style = {inputMargin}
                                 name='school_picture'
                                 value={this.state.school_picture}
                                 onChange={this.handleChangeInfo}/>
@@ -220,42 +228,51 @@ class Edit_School extends Component {
 
                         <div style={style}>Address
                             <input 
+                                style = {inputMargin}
                                 name='school_address'
                                 value={this.state.school_address}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>City
                             <input 
+                                style = {inputMargin}
                                 name='school_city'
                                 value={this.state.school_city}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <dir style={style}>state
                             <input 
+                                style = {inputMargin}
                                 name='school_state'
                                 value={this.state.school_state}
                                 onChange={this.handleChangeInfo}/>
                         </dir>
                         <div style={style}>Zip Code
                             <input 
+                                style = {inputMargin}
                                 name='school_zip'
                                 value={this.state.school_zip}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>Phone
                             <input 
+                                style = {inputMargin}
                                 name='school_phone'
                                 value={this.state.school_phone}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>Email
                             <input 
+                                style = {inputMargin}
                                 name='school_email'
                                 value={this.state.school_email}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>School Info
-                            <input 
+                            <textarea 
+                                style = {inputMargin}
+                                row='4'
+                                cols='30'
                                 name='school_info'
                                 value={this.state.school_info}
                                 onChange={this.handleChangeInfo}/>
@@ -267,24 +284,30 @@ class Edit_School extends Component {
 
                         <div style={style}>Instructor Name
                             <input 
+                                style = {inputMargin}
                                 name='school_instructor_name'
                                 value={this.state.school_instructor_name}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>Rank
                             <input 
+                                style = {inputMargin}
                                 name='school_instructor_rank'
                                 value={this.state.school_instructor_rank}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>Picture
                             <input 
+                                style = {inputMargin}
                                 name='school_instructor_picture'
                                 value={this.state.school_instructor_picture}
                                 onChange={this.handleChangeInfo}/>
                         </div>
                         <div style={style}>Bio
-                            <input 
+                            <textarea 
+                                style = {inputMargin}
+                                row='4'
+                                cols='30' 
                                 name='school_instructor_bio'
                                 value={this.state.school_instructor_bio}
                                 onChange={this.handleChangeInfo}/>
@@ -292,13 +315,11 @@ class Edit_School extends Component {
                     </div>
                     <div>
                         <Link to='/Account_Page'>
-                        <button onClick={ this.editConfirmation } >Submit</button>
+                        <button onClick={ this.editConfirmation } className='secondSubmit'>Submit</button>
                         </Link>
                     </div>
                 </div>
-                <div className='lowerDiv'>
-
-                </div>
+                
             </div>
         )
     }

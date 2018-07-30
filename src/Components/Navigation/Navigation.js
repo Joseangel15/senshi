@@ -55,7 +55,6 @@ class Navigation extends Component{
             <div className='nav-menu'>
               <Link to='/Home'><h3 style={linkColor}>Home</h3></Link>
               <Link to='/Account_Page'><h3 style={linkColor}>Account</h3></Link>
-              <h3 style={linkColor}>Store</h3>
               <Link to='/About'><h3 style={linkColor}>About</h3></Link>
               <Link to='/'><h3 style={linkColor}>Logout</h3></Link>
             </div>
@@ -65,7 +64,6 @@ class Navigation extends Component{
         <div className="mobile-nav-content">
           <Link to='/Home'><h3 style={navMenuStyle}>Home</h3></Link>
           <Link to='/Account_Page'><h3 style={navMenuStyle}>Account</h3></Link>
-          <h3 style={navMenuStyle}>Store</h3>
           <Link to='/About'><h3 style={navMenuStyle}>About</h3></Link>
           <a href={`${window.origin}/api/logout`}>
             <h3 style={navMenuStyle}>Logout</h3>

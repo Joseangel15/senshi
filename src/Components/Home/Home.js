@@ -108,20 +108,14 @@ class Home extends Component{
                             value={el.id}
                             onClick={ () => { this.getSchoolData(el.id) } }>
                             {el.school_name}
-                            <button 
-                                className='favoriteBtn' 
-                                onClick={this.handleFavorites}
-                                >
-                                
-                                Fav
-
-                            </button>
+                            
                             
                         </h4></Link>
 
                         <h6>
-                            Phone = {el.school_phone}, Address = {el.school_address}
+                            Phone = {el.school_phone}, 
                         </h6> 
+                        <h6>Address = {el.school_address}</h6>
                     </div>          
                 </div>    
             </div> 
@@ -148,7 +142,9 @@ class Home extends Component{
                         className='karate'
                         style={buttonStyling}
                         name='karate'                        
+                        onClick={window.scrollTo(0,9999999999999999)}
                         onClick={ (e) => {this.handleInputs(e)}} 
+
                         >KARATE</button>
 
                     <button 

@@ -1,5 +1,5 @@
-SELECT * from MySchools m
-JOIN Schools s on
-m.id = s.id
-where m.id = $1
-order by m.id;
+select * from
+MySchools 
+full outer join Schools on
+Schools.id=MySchools.school_id
+where MySchools.user_id = $1;

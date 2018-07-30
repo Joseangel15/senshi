@@ -94,7 +94,7 @@ module.exports = {
     },
 
     save: ( req, res, next ) => {
-        const { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_name, school_instructor_rank, school_instructor_bio, school_instructor_picture, school_picture} = req.body;
+        const { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_name, school_instructor_rank, school_instructor_bio, school_instructor_picture, school_picture } = req.body;
 
         const db = req.app.get('db'); 
 
@@ -112,11 +112,15 @@ module.exports = {
             school_instructor_name,
             school_instructor_rank,
             school_instructor_bio,
-            school_instructor_picture
+            school_instructor_picture,
         ])
         
         .then(dbResult => {
-            res.status(200).send(dbResult);
+            const [ newSchool ] = dbResult
+            const {id} = req.session.user
+            req.app.get('db').update_MySchools([id, newSchool.id])
+            .then( response => res.sendStatus(200))
+            
         })
         .catch(err => {
             console.log(err)
@@ -198,12 +202,45 @@ module.exports = {
             console.log(err)
         });
 
-    }
+    },
 
-    
+    mySchools: (req, res, next) => {
+        const {id} = req.session.user
+        const db = req.app.get('db');
+        db.find_MySchools([id]).then(dbResult => {
+            res.status(200).send(dbResult);
+        });
+    },
 
-    
+    // getSchoolId: (req, res, next) => {
+    //     const {id} = req.params
+    //     const db = req.app.get('db');
+    //     db.find_CreatedSchools([id]).then(dbResult => {
+    //         res.status(200).send(dbResult);
+    //     });
+    // },
 
+    // UpdateMySchools: (req, res, next) => {
+
+    //     const { user_id, school_id } = req.body;
+
+    //     const db = req.app.get('db'); 
+
+    //     db.Update_MySchools([ 
+
+    //         user_id,
+    //         school_id
+
+    //     ]) 
+
+        
+    //     .then(dbResult => {
+    //         res.status(200).send(dbResult);
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     });
+    // }
 
 
 }

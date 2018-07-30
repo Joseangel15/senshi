@@ -35,10 +35,17 @@ body {
 .mainTitle {
     text-decoration: none;
     color: rgb(150, 0, 0);
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     margin-top: 100px;
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(0, 0, 0, 0.432);
+    box-shadow: 1px 0px 40px rgba(0, 0, 0, 0.432);
     
+}
+
+.homeSubTitle{
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.342);
 }
 
 .pictureDiv {

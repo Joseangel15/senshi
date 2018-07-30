@@ -42,30 +42,34 @@ class Instructor_Info extends Component {
 
     render(){
         return (
-            <div className='wholeBody'>
+            <div >
                 <Navigation />
 
-                <div className='upperBox3'>
-                    <div className='instructPic'>
-                        <img src={this.state.school_instructor_picture} alt="instructor" className='toshiro'/>
+                <div className='wholeBody'>
+
+                    <h3>Instructor Information</h3>
+
+                    <div className='upperBox3'>
+                        <div className='instructPic'>
+                            <img src={this.state.school_instructor_picture} alt="instructor" className='toshiro'/>
+                        </div>
+                        <div className='nameAndRank'>
+                            <div className='instName'>
+                                {this.state.school_instructor_name}
+                            </div>
+                            <div className='instRank'>
+                                {this.state.school_instructor_rank}
+                            </div>
+                        </div>
                     </div>
-                    <div className='nameAndRank'>
-                        <div className='instName'>
-                            {this.state.school_instructor_name}
+                    <div className='lowerBox3'>
+
+                        <div className='bio'>
+                            {this.state.school_instructor_bio}
                         </div>
-                        <div className='instRank'>
-                            {this.state.school_instructor_rank}
-                        </div>
+
                     </div>
                 </div>
-                <div className='lowerBox3'>
-
-                    <div className='bio'>
-                        {this.state.school_instructor_bio}
-                    </div>
-
-                </div>
-
             </div>
         )
     }

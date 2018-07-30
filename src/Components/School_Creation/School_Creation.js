@@ -3,6 +3,9 @@ import Navigation from '../Navigation/Navigation';
 import './School_Creation.css';
 // import {Link} from 'react-router-dom';
 import axios from 'axios';
+import {getUserData} from '../../ducks/reducer';
+import {connect} from 'react-redux';
+
 
 
 class School_Creation extends Component {
@@ -24,22 +27,40 @@ class School_Creation extends Component {
             school_instructor_rank: '',
             school_instructor_picture: '',
             school_instructor_bio: '',
+            user_id: '',
+            school_id: '',
         }
     }
+    
+    componentDidMount = () => {
+        axios.get('/api/user/user-data').then(res => {
 
+            
+            this.props.getUserData(res.data)
+            this.setState({
+                user_id: this.props.user_id,
+            });
+
+            console.log(this.state.user_id)
+            
+        })
+        
+
+    }
+    
     handleInputs = (event) => {
-
+        
         this.setState({
             [event.target.name]: event.target.value
         })
     }
     
-    createSchool = () => {
-        const { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_name, school_instructor_rank, school_instructor_bio, school_instructor_picture, school_picture, } = this.state;
+    createSchool = (id) => {
+        const { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_name, school_instructor_rank, school_instructor_bio, school_instructor_picture, school_picture, user_id, school_id } = this.state;
         
         if(!school_name || !school_mastyle || !school_address || !school_city || !school_state || !school_zip || !school_phone || !school_email || !school_info || !school_instructor_name || !school_instructor_rank || !school_instructor_bio) return;
         
-
+        
         axios.post('/api/Schools', { school_name, school_mastyle, school_address, school_city, school_state, school_zip, school_phone, school_email, school_info, school_instructor_picture, school_picture, school_instructor_name, school_instructor_rank, school_instructor_bio }).then(res => {
             
             this.setState({
@@ -57,10 +78,13 @@ class School_Creation extends Component {
                 school_instructor_rank: '',
                 school_instructor_picture: '',
                 school_instructor_bio: '',
-            })
-        })
 
-        // axios.post to send the created school to the mySchools table, where it needs to record the school name, school ID, userId and mySchools Id. 
+            })
+
+            alert('School has been created')
+        })
+        
+        
     }
         
 
@@ -78,8 +102,7 @@ class School_Creation extends Component {
         return(
             <div>
                 <Navigation/>
-                <div 
-                    className='fullDiv'>
+                <div className='fullDiv'>
 
                     <div className='createSchool'>
                         Create School
@@ -235,4 +258,10 @@ class School_Creation extends Component {
     }
 }
 
-export default School_Creation;
+function mapStateToProps(state) {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, {getUserData})(School_Creation);

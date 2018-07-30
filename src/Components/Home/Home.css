@@ -56,7 +56,7 @@
     display: flex;
     padding: 10px;
     justify-content: space-evenly; 
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.664);
    
 }
 
@@ -87,24 +87,13 @@
     height: 50px;
 }
 
-.favoriteBtn {
-    background-color: DodgerBlue;
-    background-image: url(favorite_icon.png);
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    font-size: 10px;
-    cursor: pointer; 
-    margin-left: 100px;
-}
 
-.favoriteBtn:hover {
-    background-color: RoyalBlue;
-}
 
 .smallSchoolPicture {
     width: 100px;
     height: 80px;
+    margin-top: 25px;
+
 }
 
 .miniPicture {

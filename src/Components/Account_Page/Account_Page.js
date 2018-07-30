@@ -25,31 +25,23 @@ class Account_Page extends Component {
 componentDidMount = () => {
     axios.get('/api/user/user-data').then(res => {
         this.props.getUserData(res.data)
+        
     });
+    
 
-
-    axios.get('/api/Schools/find_All').then(res => {
+    axios.get('/api/Schools/find_MySchools').then(res => {
         this.setState({
 
             mySchools: res.data,
             
         })
     });
-
-    axios.get('/api/Schools/find_Favorites/').then( res => {
-        this.setState({
-
-            myFavoriteSchools: res.data
-        })
-    })     
-
-    //This componentDidMount must call the Schools created by the users. 
+ 
 }
 
 
 
 deleteSchool = ( id ) => {
-    console.log('deleteSchool:', id)
     axios.delete(`/api/School/${id}`).then(res => {
         this.setState({
             mySchools: res.data
@@ -78,10 +70,12 @@ deleteConfirmation = ( id ) => {
 }
 
 
+
 render(){
+
+    
     
     const theSchools = this.state.mySchools.map( el => {
-        console.log(this.state.mySchools)
             return (
 
 
@@ -90,13 +84,13 @@ render(){
                 <div className='listOfResults'>
                     <div >
 
-                        <Link to={`./School_Info/${el.id}`}><h4 
+                        <Link to={`./School_Info/${el.id}`}><h3 
                             className='schoolName' 
                             name= 'school'
                             value={el.id}
                             >
                             {el.school_name}
-                        </h4></Link>
+                        </h3></Link>
 
                             <Link to={`/Edit_School/${el.id}`}><button className='editBtn'>
                                 
@@ -105,7 +99,8 @@ render(){
                             </button></Link>
 
                             <button
-                                onClick={() => this.deleteConfirmation(el.id)}>
+                                onClick={() => this.deleteConfirmation(el.id)}
+                                className='editBtn'>
                                 
                                 delete
 
@@ -136,7 +131,7 @@ render(){
                     </div>
                     <div>
                         <div className='accountName'>{user.user_name}</div>
-                        <div className='accountRank'>{user.user_rank}</div>
+                        <div className='accountRank'>Master of None</div>
                         <Link to='/School_Creation'><button className='createSchoolBtn'>Create School</button></Link>
                     </div>
                 </div>
@@ -151,11 +146,7 @@ render(){
                     
                 <div className='lowerBar'>
                 
-                My Favorite Schools
-
-                    <div className='myFavoriteSchools'>
-                        
-                    </div>
+               
                 
                 </div>
             </div>

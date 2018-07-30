@@ -27,7 +27,8 @@ app.use(session ({
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
-});
+    console.log('database connected')
+}).catch(err => console.log(err));
 
 app.use(bodyParser.json())
 
@@ -76,7 +77,7 @@ app.get('/api/logout', (req, res) => {
     res.redirect(`${process.env.FRONTEND_DOMAIN}/#/`)
 })
 
-//ENDPOINTS
+// //ENDPOINTS
 
 app.get('/api/Schools/karate', controller.searchKarate);
 
@@ -107,25 +108,38 @@ app.get('/api/Schools/find_all', controller.searchAll);
 
 app.post('/api/schools', controller.save);
 
-//School Info Edpoint
+// //School Info Edpoint
 
 app.get('/api/School/:id', controller.schoolInfo);
 
-//School delete Endpoint
+// //School delete Endpoint
 
 app.delete('/api/School/:id', controller.deleteSchool)
 
-//School edit Endpoint
+// //School edit Endpoint
 
 app.put('/api/School/:id', controller.editSchool)
 
-//Endpoints to find schools from user
+// //Endpoints to find schools from user
 
 app.get('/api/Schools/find_schools', controller.findFavorites)
 
-//Add favorites to database
+// //Add favorites to database
 
 app.post('/api/Schools/Favorites', controller.saveFavorites)
+
+// //Selects user schools
+
+app.get('/api/Schools/find_MySchools', controller.mySchools)
+
+// //Update school_id in School_Creation
+
+// axios.get ('/api/Schools/get_school_id', controller.getSchoolId)
+
+// //Enter user info into MySchools
+
+// axios.post ('/api/Schools/Update_MySchools', controller.UpdateMySchools)
+
 
 
 app.listen(SERVER_PORT, () => { console.log(`It's over ${SERVER_PORT}!`);
