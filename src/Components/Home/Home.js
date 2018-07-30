@@ -142,7 +142,7 @@ class Home extends Component{
                         className='karate'
                         style={buttonStyling}
                         name='karate'                        
-                        onClick={window.scrollTo(0,9999999999999999)}
+                        onClick={document.documentElement.scrollTop = document.documentElement.scrollHeight}
                         onClick={ (e) => {this.handleInputs(e)}} 
 
                         >KARATE</button>

@@ -46,15 +46,19 @@ deleteSchool = ( id ) => {
         this.setState({
             mySchools: res.data
         })
+
+    
     })
 
-    axios.get('/api/Schools/find_all').then(res => {
-        this.setState({
 
-            mySchools: res.data
 
-        })
-    });
+    // axios.get('/api/Schools/find_MySchools').then(res => {
+    //     this.setState({
+
+    //         mySchools: res.data
+
+    //     })
+    // });
 }
 
 

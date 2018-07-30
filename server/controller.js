@@ -137,10 +137,20 @@ module.exports = {
 
     deleteSchool: (req, res, next ) => {
         const {id} = req.params
+        console.log(req.params)
         const db = req.app.get('db');
-        db.delete_School([id]).then(id => {
-            res.status(200).send(id);
+        db.delete_School([id])
+        
+        .then(result => {
+            db.deleteFromMySchools([id, req.session.user.id])
+            
+            .then(schools => {
+                res.status(200).send(schools);
+            })
+            
         })
+        
+
     },
 
     editSchool: (req, res, next ) => {
